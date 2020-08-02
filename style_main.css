@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #b2c9b2;
+    background: #b2c9b2 url(cats_bg.png);
 }
 
 .area {
@@ -30,6 +30,7 @@ body {
 
     border-bottom: 0;
 }
+
 #shop {
     background-color: #298d8d;
 }
@@ -44,6 +45,11 @@ body {
 #in_title {
     align: center;
     color: azure;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
 }
 
 #in_subtitle {
@@ -51,4 +57,9 @@ body {
     background-color: #4fb8b8;
     color: #185757;
     border-radius: 100px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
 }

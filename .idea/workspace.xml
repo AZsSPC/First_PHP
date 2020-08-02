@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d1171223-33b9-4931-ba2f-e0103b832265" name="Default Changelist" comment="f">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/style_main.css" afterDir="false" />
@@ -46,7 +63,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596295532783</updated>
-      <workItem from="1596295533922" duration="13909000" />
+      <workItem from="1596295533922" duration="14172000" />
+      <workItem from="1596369171176" duration="4451000" />
     </task>
     <task id="LOCAL-00001" summary="f">
       <created>1596300636987</created>
@@ -55,11 +73,29 @@
       <option name="project" value="LOCAL" />
       <updated>1596300636987</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="f">
+      <created>1596314853382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596314853382</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="f" />
@@ -82,9 +118,9 @@
       <screen x="64" y="27" width="1536" height="873" />
     </state>
     <state x="321" y="98" width="1022" height="737" key="SettingsEditor/64.27.1536.873@64.27.1536.873" timestamp="1596295685889" />
-    <state x="427" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1596300745991">
+    <state x="427" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1596314875849">
       <screen x="64" y="27" width="1536" height="873" />
     </state>
-    <state x="427" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/64.27.1536.873@64.27.1536.873" timestamp="1596300745991" />
+    <state x="427" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/64.27.1536.873@64.27.1536.873" timestamp="1596314875849" />
   </component>
 </project>

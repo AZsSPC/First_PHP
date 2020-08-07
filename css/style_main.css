@@ -10,6 +10,14 @@ body {
     border-radius: 100px;
     background-color: azure;
     padding: 5px;
+    width: 8%;
+    text-align: center;
+}
+
+.title {
+    width: 24%;
+    padding: 2px;
+    text-align: center;
 }
 
 .header {
@@ -33,6 +41,8 @@ body {
 
 #shop {
     background-color: #298d8d;
+    width: 96%;
+    margin: 2%;
 }
 
 #title {

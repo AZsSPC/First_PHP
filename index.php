@@ -49,33 +49,56 @@ $table = '<tr>
 </tr>';
 
 $input = [
-    [$id => getNumPP()],
-    [$name => 'The the'],
-    [$coll => rand(0, 10)],
-    [$mat => '0000'],
-    [$lore => '0000']
-    ,
-    [$id => getNumPP()],
-    [$name => 'The the'],
-    [$coll => rand(0, 10)],
-    [$mat => '0000'],
-    [$lore => '0000']
-    ,
-    [$id => getNumPP()],
-    [$name => 'The the'],
-    [$coll => rand(0, 10)],
-    [$mat => '0000'],
-    [$lore => '0000']
-];
+    [
+        $id => getNumPP(),
+        $name => 'The the',
+        $coll => rand(0, 10),
+        $mat => '0000',
+        $lore => '0000'
+    ],
+    [
+        $id => getNumPP(),
+        $name => 'The the',
+        $coll => rand(0, 10),
+        $mat => '0000',
+        $lore => '0000'
+    ],
+    [
+        $id => getNumPP(),
+        $name => 'The the',
+        $coll => rand(0, 10),
+        $mat => '0000',
+        $lore => '0000'
+    ],
+    [
+        $id => getNumPP(),
+        $name => 'The the',
+        $coll => rand(0, 10),
+        $mat => '0000',
+        $lore => '0000'
+    ],
+    [
+        $id => getNumPP(),
+        $name => 'The the',
+        $coll => rand(0, 10),
+        $mat => '0000',
+        $lore => '0000'
+    ],
+    [
+        $id => getNumPP(),
+        $name => 'The the',
+        $coll => rand(0, 10),
+        $mat => '0000',
+        $lore => '0000'
+    ]];
 
-foreach ($input as $line) {
-    $table .= '<tr>
-<td>' . $line[$id] . '</td>
-<td>' . $line[$name] . '</td>
-<td>' . $line[$coll] . '</td>
-<td>' . $line[$mat] . '</td>
-<td>' . $line[$lore] . '</td>
-</tr>';
+foreach ($input as  $key) {
+    $table .= "<tr>
+<td>{$key[$id]}</td>
+<td>{$key[$name]}</td>
+<td>{$key[$coll]}</td>
+<td>{$key[$mat]}</td>
+<td>{$key[$lore]}</td>
+</tr>";
 }
 echo $html_table_start . $table . $html_table_end;
-

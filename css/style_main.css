@@ -46,6 +46,7 @@ body {
 }
 
 #title {
+    width: 100%;
     padding: 10px;
     background-color: #008282;
     border-bottom-left-radius: 100px;

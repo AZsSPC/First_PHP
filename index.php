@@ -14,25 +14,26 @@ $html_table_start = '<!DOCTYPE html><html lang="">
 
 </head>
 <body>
-<table width="100%" id="title">
+<table id="title">
     <tr>
-<td width="38%"></td>
-<td width="24" align="center">
-    <h1 id="in_title"> THE TITLE</h1>
-    <h4 id="in_subtitle">the subtitle</h4>
-</td>
-<td width="23%"></td>
-<td class="area" width="8%" align="center">
-    <a href="login.html">LOG IN</a> or
-    <a href="register.html">REGISTER</a>
-</td>
-<td width="7%"></td>
+        <td width="38%"></td>
+        <td class="title">
+            <h1 id="in_title"> THE TITLE</h1>
+            <h4 id="in_subtitle">the subtitle</h4>
+        </td>
+        <td width="23%"></td>
+        <td class="area" >
+            <a href="login.html">LOG IN</a> or
+            <a href="register.html">REGISTER</a>
+        </td>
+        <td width="7%"></td>
     </tr>
 </table>
-<table width="96%" id="shop" style="margin: 2%;">
+<table id="shop">
     <caption class="header"><h3>* * *</h3></caption>
     ';
-$html_table_end = '</table></body></html>';
+$html_table_end = '</table>
+<a href="generator.php">You can also use this</a></body></html>';
 
 function getNumPP()
 {
@@ -92,7 +93,7 @@ $input = [
         $lore => '0000'
     ]];
 
-foreach ($input as  $key) {
+foreach ($input as $key) {
     $table .= "<tr>
 <td>{$key[$id]}</td>
 <td>{$key[$name]}</td>

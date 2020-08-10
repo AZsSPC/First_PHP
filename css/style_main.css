@@ -6,6 +6,10 @@ body {
     background: #b2c9b2 url(../img/cats_bg.png);
 }
 
+.tc {
+    text-align: center;
+}
+
 .area {
     border-radius: 100px;
     background-color: azure;

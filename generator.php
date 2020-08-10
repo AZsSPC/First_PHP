@@ -21,7 +21,7 @@ while ($isVisible && (($rand = (int)rand(1, 100)) !== $user_num)) {
 
 echo '<div align="center">
     <h1>Input number from 1 to 100</h1>
-    <form action="generator.php?" method="GET" class="form-group">
+    <form action="generator.php?" method="GET">
         <input type="checkbox" name="smart" ' . ($isSmart ? 'checked' : '') . '>do smart? </input><br>
         <input type="number" name="user_num"  placeholder="1 - 100" min ="1" max="100" value="' . ($isVisible ? $user_num : '') . '">
         <input type="submit"></form><br>
@@ -31,3 +31,11 @@ echo '<div align="center">
     . '</strong> tries to guess you number is <strong>' . $user_num . ' </strong></p>'
     . (strlen($arr) > 1 ? '<p> All tries' . $arr . '</p>' : '')
     . '</div></div>';
+
+/**
+ * <form action="generator.php?" method="GET">
+ * //generator.php замените на свой файл
+ * <input type="number" name="user_num">
+ * //http://localhost:xxxx/generator.php?user_num=1
+ * //user_num - это ключ от массива $_GET
+ */

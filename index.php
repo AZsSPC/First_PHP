@@ -1,11 +1,9 @@
 <?php
-$npp = 0;
 $id = 'i';
 $name = 'n';
 $coll = 'c';
 $mat = 'm';
 $lore = 'l';
-
 $html_table_start = '<!DOCTYPE html><html lang="">
 <head>
     <meta charset="UTF-8">
@@ -32,15 +30,6 @@ $html_table_start = '<!DOCTYPE html><html lang="">
 <table id="shop">
     <caption class="header"><h3>* * *</h3></caption>
     ';
-$html_table_end = '</table>
-<a href="generator.php">You can also use this</a></body></html>';
-
-function getNumPP()
-{
-    global $npp;
-    return '#' . ++$npp;
-}
-
 $table = '<tr>
 <th>ID</th>
 <th>Name</th>
@@ -48,58 +37,36 @@ $table = '<tr>
 <th>Materials</th>
 <th>Lore</th>
 </tr>';
+$html_table_end = '</table><a href="generator.php">You can also use this</a></body></html>';
+/**
+ * $input = [
+ * [
+ * $id => 00,
+ * $name => 'The the',
+ * $coll => rand(0, 10),
+ * $mat => '0000',
+ * $lore => '0000'
+ * ]
+ * ];*/
+$item_count = $_GET['items'];
+for ($i = 0; $i < $item_count; $i++) {
+    $item = preg_split('/;/', $_GET['item_' . $i], 5);
+    $table .= '<tr class="tc">';
+    foreach ($item as $v) $table .= '<td>' . $v . '</td>';
 
-$input = [
-    [
-        $id => getNumPP(),
-        $name => 'The the',
-        $coll => rand(0, 10),
-        $mat => '0000',
-        $lore => '0000'
-    ],
-    [
-        $id => getNumPP(),
-        $name => 'The the',
-        $coll => rand(0, 10),
-        $mat => '0000',
-        $lore => '0000'
-    ],
-    [
-        $id => getNumPP(),
-        $name => 'The the',
-        $coll => rand(0, 10),
-        $mat => '0000',
-        $lore => '0000'
-    ],
-    [
-        $id => getNumPP(),
-        $name => 'The the',
-        $coll => rand(0, 10),
-        $mat => '0000',
-        $lore => '0000'
-    ],
-    [
-        $id => getNumPP(),
-        $name => 'The the',
-        $coll => rand(0, 10),
-        $mat => '0000',
-        $lore => '0000'
-    ],
-    [
-        $id => getNumPP(),
-        $name => 'The the',
-        $coll => rand(0, 10),
-        $mat => '0000',
-        $lore => '0000'
-    ]];
-
-foreach ($input as $key) {
-    $table .= "<tr>
-<td>{$key[$id]}</td>
-<td>{$key[$name]}</td>
-<td>{$key[$coll]}</td>
-<td>{$key[$mat]}</td>
-<td>{$key[$lore]}</td>
-</tr>";
 }
+/**
+ * foreach ($input as $item) {
+ * $table .= "<tr class='tc' >
+ * <td >#{$item[$id]}</td>
+ * <td >{
+ * $item[$name]}</td >
+ * <td >{
+ * $item[$coll]}</td >
+ * <td >{
+ * $item[$mat]}</td >
+ * <td >{
+ * $item[$lore]}</td >
+ * </tr > ";
+ * }*/
 echo $html_table_start . $table . $html_table_end;

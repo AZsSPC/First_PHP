@@ -1,72 +1,59 @@
+<link rel="stylesheet" type="text/css" href="css/style_main.css">
 <?php
-$id = 'i';
-$name = 'n';
-$coll = 'c';
-$mat = 'm';
-$lore = 'l';
-$html_table_start = '<!DOCTYPE html><html lang="">
-<head>
-    <meta charset="UTF-8">
-    <title>ST-SH-RA list</title>
-    <link rel="stylesheet" type="text/css" href="css/style_main.css">
-
-</head>
-<body>
-<table id="title">
-    <tr>
-        <td width="38%"></td>
-        <td class="title">
-            <h1 id="in_title"> THE TITLE</h1>
-            <h4 id="in_subtitle">the subtitle</h4>
-        </td>
-        <td width="23%"></td>
-        <td class="area" >
-            <a href="login.html">LOG IN</a> or
-            <a href="register.html">REGISTER</a>
-        </td>
-        <td width="7%"></td>
-    </tr>
-</table>
-<table id="shop">
-    <caption class="header"><h3>* * *</h3></caption>
-    ';
-$table = '<tr>
-<th>ID</th>
-<th>Name</th>
-<th>Collection</th>
-<th>Materials</th>
-<th>Lore</th>
-</tr>';
-$html_table_end = '</table><a href="generator.php">You can also use this</a></body></html>';
-/**
- * $input = [
- * [
- * $id => 00,
- * $name => 'The the',
- * $coll => rand(0, 10),
- * $mat => '0000',
- * $lore => '0000'
- * ]
- * ];*/
-$item_count = $_GET['items'];
-for ($i = 0; $i < $item_count; $i++) {
-    $item = preg_split('/;/', $_GET['item_' . $i], 5);
-    $table .= '<tr class="tc">';
-    foreach ($item as $v) $table .= '<td>' . $v . '</td>';
-
+const SAVE_JSON = 'files/data.json';
+const SAVE_INPUT = 'files/input.csv';
+function doDefault()
+{
+    echo '<form enctype="multipart/form-data" action="/" method="POST">
+    <input type="hidden" name="MAX_FILE_SIZE" value="50000">
+    <input type="hidden" name="do" value="send">
+    Отправить этот файл: <input name="ddos_attack" type="file">
+    <br>
+    <input type="submit" value="Отправить файл">
+</form>';
 }
-/**
- * foreach ($input as $item) {
- * $table .= "<tr class='tc' >
- * <td >#{$item[$id]}</td>
- * <td >{
- * $item[$name]}</td >
- * <td >{
- * $item[$coll]}</td >
- * <td >{
- * $item[$mat]}</td >
- * <td >{
- * $item[$lore]}</td >
- * </tr > ";
- * }*/
-echo $html_table_start . $table . $html_table_end;
+
+function doThenSend()
+{
+    move_uploaded_file($_FILES['ddos_attack']['tmp_name'], SAVE_INPUT);
+    $input = str_replace("\r\n", '', file(SAVE_INPUT));
+    $keys = explode(',', $input[0]);
+    $data = ['keys' => $keys];
+    for ($i = 1; $i < sizeof($input); $i++) {
+        $line = explode(',', $input[$i]);
+        $user = [];
+        for ($o = 0; $o < sizeof($keys); $o++) {
+            $user [$keys[$o]] = $line[$o];
+        }
+        $data['values'][] = $user;
+    }
+    file_put_contents(SAVE_JSON, json_encode($data));
+}
+
+function drawTable()
+{
+    $file = (array)json_decode(file_get_contents(SAVE_JSON));
+    $th = $file['keys'];    //разделы
+    $td = $file['values'];  //данные
+    $container = [];
+    echo '<table><tr>';
+    $id = 0;
+    foreach ($th as $o) {
+        $container[$id++] = $o;
+        echo '<th>' . $o . '</th>';
+    }
+    $cs = sizeof($container);
+    echo '</tr>';
+    foreach ($td as $o) {
+        $o = (array)$o;
+        echo '<tr>';
+        for ($i = 0; $i < $cs; $i++) echo '<td>' . $o[$container[$i]] . '</td>';
+        echo '</tr>';
+    }
+    echo '</table>';
+}
+
+if ($_POST['do'] == 'send' && $_FILES['ddos_attack']['error'] == UPLOAD_ERR_OK) {
+    doThenSend();
+} else doDefault();
+drawTable();

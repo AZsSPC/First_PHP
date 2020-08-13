@@ -19,11 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1171223-33b9-4931-ba2f-e0103b832265" name="Default Changelist" comment=".4">
+    <list default="true" id="d1171223-33b9-4931-ba2f-e0103b832265" name="Default Changelist" comment="f">
+      <change afterPath="$PROJECT_DIR$/files/input.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style_main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generator.php" beforeDir="false" afterPath="$PROJECT_DIR$/generator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/cats_bg.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +66,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/css/files" />
       <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$/css" />
     </key>
@@ -84,7 +91,10 @@
       <workItem from="1596811447510" duration="301000" />
       <workItem from="1596812044602" duration="1814000" />
       <workItem from="1596817955215" duration="1063000" />
-      <workItem from="1596965674849" duration="15647000" />
+      <workItem from="1596965674849" duration="17610000" />
+      <workItem from="1597163355675" duration="978000" />
+      <workItem from="1597167963614" duration="649000" />
+      <workItem from="1597351462765" duration="8564000" />
     </task>
     <task id="LOCAL-00001" summary="f">
       <created>1596300636987</created>
@@ -135,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596977444998</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="four">
+      <created>1597083557514</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1597083557514</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,16 +174,18 @@
     <MESSAGE value="f" />
     <MESSAGE value="WT is _IT_?" />
     <MESSAGE value=".4" />
-    <option name="LAST_COMMIT_MESSAGE" value=".4" />
+    <MESSAGE value="four" />
+    <option name="LAST_COMMIT_MESSAGE" value="four" />
   </component>
   <component name="WindowStateProjectService">
     <state x="565" y="212" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596296402775">
       <screen x="64" y="27" width="1536" height="873" />
     </state>
     <state x="565" y="212" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/64.27.1536.873@64.27.1536.873" timestamp="1596296402775" />
-    <state x="603" y="207" width="447" height="520" key="FileChooserDialogImpl" timestamp="1596300612188">
-      <screen x="64" y="27" width="1536" height="873" />
+    <state x="600" y="207" width="447" height="520" key="FileChooserDialogImpl" timestamp="1597083708686">
+      <screen x="60" y="27" width="1540" height="873" />
     </state>
+    <state x="600" y="207" key="FileChooserDialogImpl/60.27.1540.873@60.27.1540.873" timestamp="1597083708686" />
     <state x="603" y="207" width="447" height="520" key="FileChooserDialogImpl/64.27.1536.873@64.27.1536.873" timestamp="1596300612188" />
     <state x="687" y="363" width="289" height="207" key="Github.ShareDialog" timestamp="1596300731056">
       <screen x="64" y="27" width="1536" height="873" />
@@ -185,10 +204,14 @@
       <screen x="64" y="27" width="1536" height="873" />
     </state>
     <state x="321" y="98" width="1022" height="737" key="SettingsEditor/64.27.1536.873@64.27.1536.873" timestamp="1596466711003" />
-    <state x="424" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1596977464688">
+    <state x="424" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1597083565586">
       <screen x="60" y="27" width="1540" height="873" />
     </state>
-    <state x="424" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/60.27.1540.873@60.27.1540.873" timestamp="1596977464688" />
+    <state x="424" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/60.27.1540.873@60.27.1540.873" timestamp="1597083565586" />
     <state x="427" y="199" width="800" height="535" key="Vcs.Push.Dialog.v2/64.27.1536.873@64.27.1536.873" timestamp="1596393774586" />
+    <state x="413" y="121" width="824" height="691" key="editAsTableFormatDialogDimension" timestamp="1597354204461">
+      <screen x="60" y="27" width="1540" height="873" />
+    </state>
+    <state x="413" y="121" width="824" height="691" key="editAsTableFormatDialogDimension/60.27.1540.873@60.27.1540.873" timestamp="1597354204461" />
   </component>
 </project>
